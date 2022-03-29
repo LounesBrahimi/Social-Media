@@ -1,1 +1,58 @@
-<p>posting works!</p>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+<div style="text-align: center">
+    <h1>{{ message }}</h1>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <form>
+                <fieldset>
+                    <legend class="text-center">Valid information is required to register. <span class="req"><small>
+                                required *</small></span></legend>
+
+                    <div class="form-group">
+                        <label for="title"><span class="req">* </span> Title: <small>This will be the title of your
+                                post</small> </label>
+                        <input required type="text" [(ngModel)]="post.title" name="title" id="title"
+                            class="form-control phone" maxlength="28" placeholder="Enter the title" />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="description"><span class="req">* </span> Description: </label>
+                        <input class="form-control" type="text" [(ngModel)]="post.description" name="description" id="txt" required
+                            placeholder="Enter the description" />
+                        <div id="errFirst"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="imageUrl"><span class="req">* </span> Image Url : </label>
+                        <input class="form-control" type="text" [(ngModel)]="post.imageUrl" name="imageUrl" id="txt"
+                            placeholder="The url of the image posts" required />
+                        <div id="errLast"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="snaps"><span class="req">* </span> Likes : </label>
+                        <input class="form-control" required type="number" [(ngModel)]="post.snaps" name="snaps"
+                            id="snaps" placeholder=" Likes" />
+                        <div class="status" id="status"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="prix"><span class="req">* </span> Price : </label>
+                        <input class="form-control" required type="number" [(ngModel)]="post.prix" name="prix"
+                            id="prix" placeholder="The price" />
+                        <div class="status" id="status"></div>
+                    </div>
+                    <div class="form-group">
+                        <input class="btn btn-success" type="submit" name="submit_reg" value="Register" (click)="postNow()">
+                    </div>
+                </fieldset>
+            </form>
+
+        </div>
+    </div>
+</div>
