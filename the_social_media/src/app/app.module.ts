@@ -13,6 +13,7 @@ import { CardPostComponent } from './card-post/card-post.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AngularMaterialModule } from './angular-material.module';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
   declarations: [
@@ -26,10 +27,10 @@ import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    FormsModule, 
     ReactiveFormsModule,
     BrowserAnimationsModule,
     AngularMaterialModule,
+    FlexLayoutModule,
   ],
   providers: [PostingServiceService],
   bootstrap: [AppComponent],
