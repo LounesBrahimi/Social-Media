@@ -12,4 +12,8 @@ export class PostingServiceService {
   public doPosting(post: Post){
     return this.http.post<Post>("http://localhost:9010/post",post,{responseType:'text' as 'json'});
   }
+
+  public doGet(){
+    return this.http.get("http://localhost:9010/posts");
+  }
 }

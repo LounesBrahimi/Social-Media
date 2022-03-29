@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PostingServiceService } from '../posting-service.service';
 
 @Component({
   selector: 'app-getting',
@@ -6,10 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./getting.component.scss']
 })
 export class GettingComponent implements OnInit {
+  
+  posts : any;
 
-  constructor() { }
+  constructor(private service: PostingServiceService) { }
 
   ngOnInit(): void {
+    let resp = this.service.doGet();
+    resp.subscribe((data)=> this.posts = data)
   }
+
 
 }

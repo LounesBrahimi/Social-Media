@@ -9,12 +9,14 @@ import { PostingServiceService } from './posting-service.service';
 
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { CardPostComponent } from './card-post/card-post.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PostingComponent,
-    GettingComponent
+    GettingComponent,
+    CardPostComponent
   ],
   imports: [
     BrowserModule,
